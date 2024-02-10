@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mimicandles2</title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+        <link href="styles.css" rel="stylesheet">
+       
+    </head>
+    
+    <body class="">
+        <div class="container">
+        <section id="header">
+            <a href="#"><img src="pics/logo.jpeg" class="logo" alt=""></a>
+            <div>
+                <ul id="navbar">
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a  href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contact.php">Contact us</a></li>
+                    <li><a id="lg-bag" class="lg-bag"><i class="far fa-shopping-bag"></i></a></li>
+                    <span id="span">0</span>
+                </ul>
+            </div>
+            </div>
+    
+        </section>
+       
+        <section id="hero" >
+        
+            <h4>Trade with love</h4>
+            <h2>super value products</h2>
+            <h1>HANDMADE WITH LOVE</h1>
+            <p>save and enjoy our handmade products</p>
+            <button onclick="window.location.href='shop.html';"> Shop Now</button>
+            
+        </section>      
+
+        <section id="banner" class="section-m1">
+            <h2>Up to <span>50% Off </span>on big orders</h2>
+            <h2>We have special offers for baptize wedding engagement birthdays and much more</h2>
+            <h1>Contact us for any special order you need</h1>
+            <button class="normal" onclick="window.location.href='contact.php';">Contact us</button>
+        </section>
+       <footer class="section-p1">
+        <div class="col">
+            <img src="pics/logo.jpeg" alt="">
+            
+            <p><strong>Address:</strong> Mount Lebanon Gharfine, Saint Rita Street</p>
+            <P><strong>Phone:</strong>+961 3 136021 or +961 79 182037 (Whatsapp available)</P>
+           
+        
+        <div >
+            <h4>Check and follow our pages for new videos and features</h4>
+            <img class="fab fa-instagram" src="pics/instagram icon.png" onclick="window.location.href = 'https://www.instagram.com/mimicandles2/';"></i>
+            <img class="fab fa-tiktok" src="pics/tiktoc icon.png" onclick="window.location.href = 'https://www.tiktok.com/@mimicandles2/';"></i>
+        </div>
+    </div>
+       </footer>
+    </div>
+   
+<!-- Include product listing HTML with hidden attribute -->
+<section id="product1" class="section-p1" hidden>
+    <div id="listProduct">
+        <div class="pro">
+            <img src="pics/bear.jpeg" alt="">
+            <h2>Name Product</h2>
+            <div class="price">$3</div>
+            <label for="colorSelection">Select Color:</label>
+            <input type="color" id="colorSelection" name="colorSelection" value="#ffffff">
+
+            <button class="addCart">
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</section>
+    <div class="cartTab">
+        <h1>Cart</h1>
+        <div class="ListCart">
+      
+    </div>
+    <div class="btn">
+        <button class="close">Close</button>
+        <button class="checkout"  onclick="window.location.href='checkout.php';">Checkout
+        </button> 
+         <!-- Add a new div to display the "Thank you" message -->
+    <div id="thankYouMessage" style="display: none;">
+        <p>Thank you for choosing Mimicandles!</p>
+    </div>
+       <script src="app.js"></script>
+    </body>
+</html>

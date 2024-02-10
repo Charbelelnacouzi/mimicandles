@@ -1,0 +1,164 @@
+[
+    {
+        "id": 1,
+        "name":"Love bear",
+        "price":3,
+        "image":"pics/bear.jpeg"    
+    }
+    ,{
+        "id": 2,
+        "name":"Pink love bear",
+        "price":3,
+        "image":"pics/bear1.jpg"    
+    }
+    ,{
+        "id": 3,
+        "name":"Pink bubbles",
+        "price":2,
+        "image":"pics/bubbles.jpg"    
+    }
+    ,{
+        "id": 4,
+        "name":"two colors bubbles",
+        "price":2.5,
+        "image":"pics/bubbles1.jpg"    
+    }
+    ,{
+        "id": 5,
+        "name":"Purple bubbles",
+        "price":2,
+        "image":"pics/bubbles2.jpg"    
+    }
+    ,{
+        "id": 6,
+        "name":"Blue Candle",
+        "price":4,
+        "image":"pics/candle.jpg"    
+    }
+    ,{
+        "id": 7,
+        "name":"Purple candle",
+        "price":4,
+        "image":"pics/candle1.jpg"    
+    }
+    ,{
+        "id": 8,
+        "name":"Purple flower",
+        "price":3,
+        "image":"pics/flower 1.jpg"    
+    }
+    ,{
+        "id": 9,
+        "name":"Pink flower",
+        "price":3,
+        "image":"pics/flower.jpg"    
+    }
+    ,{
+        "id": 10,
+        "name":"Heart with flowers",
+        "price":2,
+        "image":"pics/heart with flower.jpg"    
+    }
+    ,{
+        "id": 11,
+        "name":"Purple heart with flowers",
+        "price":2,
+        "image":"pics/heart with flower1.jpg"    
+    }
+    ,{
+        "id": 12,
+        "name":"Pink heart with flowers",
+        "price":2,
+        "image":"pics/heart with flower2.jpg"    
+    }
+    ,{
+        "id": 13,
+        "name":"Red heart",
+        "price":2,
+        "image":"pics/heart.jpg"   
+    }
+    ,{
+        "id": 14,
+        "name":"Red heart with flowers",
+        "price":2,
+        "image":"pics/heart1.jpg"    
+    }
+    ,{
+        "id": 15,
+        "name":"Pink heart with flowers",
+        "price":2,
+        "image":"pics/heart3.jpg"    
+    }
+    ,{
+        "id": 16,
+        "name":"Jar with decoration",
+        "price":8,
+        "image":"pics/hearts in jar.jpg"    
+    }
+    ,{
+        "id": 17,
+        "name":"Green saint family",
+        "price":3,
+        "image":"pics/holy family.jpg"    
+    }
+    ,{
+        "id": 18,
+        "name":"Jar with decoration and smells",
+        "price":8,
+        "image":"pics/jar.jpg"    
+    }
+    ,{
+        "id": 19,
+        "name":"Pink saint family",
+        "price":3,
+        "image":"pics/jesus.jpg"    
+    }
+    ,{
+        "id": 20,
+        "name":"Purple love bear",
+        "price":3,
+        "image":"pics/love bear 1.jpg"    
+    }
+    ,{
+        "id": 21,
+        "name":"Purple love candle",
+        "price":2,
+        "image":"pics/love.jpg"    
+    }
+    ,{
+        "id": 22,
+        "name":"Orange Marry",
+        "price":3,
+        "image":"pics/marry.jpg"    
+    }
+    ,{
+        "id": 23,
+        "name":"Marry",
+        "price":3,
+        "image":"pics/marry1.jpg"    
+    }
+    ,{
+        "id": 24,
+        "name":"Mother love",
+        "price":5,
+        "image":"pics/mother love.jpg"    
+    }
+    ,{
+        "id": 25,
+        "name":"Yellow saint family",
+        "price":3,
+        "image":"pics/saint family.jpg"    
+    }
+    ,{
+        "id": 26,
+        "name":"Purple bear",
+        "price":0.5,
+        "image":"pics/small bear.jpg"    
+    }
+    ,{
+        "id": 27,
+        "name":"Jar with decoration and smells",
+        "price":10,
+        "image":"pics/decorjar.jpg"    
+    }
+]

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mimicandles2</title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <section id="header">
+            <a href="#"><img src="pics/logo.jpeg" class="logo" alt=""></a>
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a  href="shop.html">Shop</a></li>
+                    <li><a class="active" href="about.html">About us</a></li>
+                    <li><a href="contact.php">Contact us</a></li>
+                    <li><a id="lg-bag" class="lg-bag"><i class="far fa-shopping-bag"></i></a></li>
+                    <span id="span">0</span>
+                </ul>
+            </div>
+        </section>
+        <section id="page-header" class="about-header">
+            <h1>#KnowUs?</h1>
+            <p>Let us introduce ourselves to you</p>
+        </section>
+                       <!-- Include product listing HTML with hidden attribute -->
+<section id="product1" class="section-p1" hidden>
+    <div id="listProduct">
+        <div class="pro">
+            <img src="pics/bear.jpeg" alt="">
+            <h2>Name Product</h2>
+            <div class="price">$3</div>
+            <label for="colorSelection">Select Color:</label>
+            <input type="color" id="colorSelection" name="colorSelection" value="#ffffff">
+
+            <button class="addCart">
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</section>
+        <section id="about-head" class="section-p1">
+            <div> 
+                <h1>Who We Are?</h1>
+                <P> Welcome to Mimicandles where the warmth and charm of handcrafted candles come to life. At Mimi Candles, we take pride in creating unique and exquisite candles right from the heart of our home to yours. Every candle is thoughtfully crafted with care and attention to detail, infusing each piece with a touch of passion and creativity. Our collection boasts a variety of enchanting scents and captivating designs, bringing a cozy ambiance and a sense of tranquility to any space. Mimi Candles is more than just a shop; it's a celebration of the artistry of candle making. Join us on this aromatic journey, and let Mimi Candles illuminate your surroundings with the flicker of handmade magic.
+                    Discover a world of delightful scents and mesmerizing candle designs. Our candles are crafted with care to bring warmth and beauty to your space.
+                    Indulge your senses in the delightful world of Mimi Candles, where we offer a diverse range of candles that captivate with their myriad shapes, colors, and enchanting fragrances. Our collection is a testament to the artistry of candle making, featuring an array of shapes that range from classic pillars to intricately molded figurines. Immerse yourself in a palette of colors that evoke emotions and add a touch of style to any setting. From soothing lavender to sweet vanilla, our candles boast an array of captivating scents that transform your space into a haven of tranquility. At Mimi Candles, we believe that candles are not just decorative pieces but vessels that carry the essence of warmth, style, and comfort. Explore our unique creations and elevate your ambiance with the perfect fusion of shapes, colors, and aromas. Welcome to Mimi Candles – where every candle tells a story.</P>
+                    <h2>we create projects for <span>weddings baptizes bachelors birthdays engagements and much more!</span> Contact us for any order you need</h2>
+                    <h1>We deliver all over Lebanon</h1>
+                </div>
+        </section>
+
+       <footer class="section-p1">
+        <div class="col">
+            <img src="pics/logo.jpeg" alt="">
+            
+            <p><strong>Address:</strong> Mount Lebanon Gharfine, Saint Rita Street</p>
+            <P><strong>Phone:</strong>+961 3 136021 or +961 79 182037 (Whatsapp available)</P>
+            
+        
+      
+            <h4>Check and follow our pages for new videos and features</h4>
+            <img class="fab fa-instagram" src="pics/instagram icon.png" onclick="window.location.href = 'https://www.instagram.com/mimicandles2/';"></i>
+            <img class="fab fa-tiktok" src="pics/tiktoc icon.png" onclick="window.location.href = 'https://www.tiktok.com/@mimicandles2/';"></i>
+        
+    </div>
+       </footer>
+
+       <div class="cartTab">
+        <h1>Cart</h1>
+        <div class="ListCart">
+      
+    </div>
+    <div class="btn">
+        <button class="close">Close</button>
+        <button class="checkout"  onclick="window.location.href='checkout.php';">Checkout
+        </button> 
+     <script src="app.js"></script>
+    </body>
+</html>
