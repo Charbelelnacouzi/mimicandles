@@ -112,9 +112,9 @@
     }
     ,{
         "id": 18,
-        "name":"Jar with decoration and smells",
+        "name":"Jar with decoration",
         "price":8,
-        "image":"pics/jar.jpg"
+        "image":"pics/jar1.jpg"
     }
     ,{
         "id": 19,
@@ -174,9 +174,38 @@
     }
     ,{
         "id": 27,
-        "name":"Jar with decoration and smells",
+        "name":"Jar with decoration",
+        "price":10,
+        "image":"pics/jar2.jpg" 
+        
+    }
+    ,{
+        "id": 28,
+        "name":"earth",
+        "price":6,
+        "image":"pics/earth.jpg" 
+        
+    }
+    ,{
+        "id": 29,
+        "name":" multicolor heart with flowers",
+        "price":2.5,
+        "image":"pics/heart with flower 3.jpg" 
+        
+    }
+    ,{
+        "id": 30,
+        "name":"mother",
+        "price":2.5,
+        "image":"pics/mother.jpg" 
+        
+    }
+    ,{
+        "id": 31,
+        "name":"Jar with decoration ",
         "price":10,
         "image":"pics/decorjar.jpg" 
         
     }
+ 
 ]
