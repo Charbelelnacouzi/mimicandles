@@ -76,6 +76,7 @@ body{
     position: relative;
     cursor:pointer;
 }
+
 #header span{
     display: flex;
     width: 18px;
@@ -123,7 +124,28 @@ color: #088178
     bottom: -4px;
     left: 20px;
 }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:  #E3E6F3;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
 
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover{
+   color: #088178;
+}
+
+.show {
+    display: block;
+}
 
 /* Home page */
 
@@ -166,7 +188,7 @@ color: #088178
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: aqua;
+    
     height:55vh;
 }
 #banner h2{
@@ -425,6 +447,9 @@ body{
 #navbar li{
 margin-bottom: 25px;
 }
+.dropdown-content a:hover{
+    color: #088178;
+ }
 #product1{
     align-items: center;
     justify-content: center;
@@ -501,6 +526,9 @@ font-size: 35px;
             margin-right:25px;
         
     }
+    .dropdown-content a:hover{
+        color: #088178;
+     }
     .cartTab {
         width: 100%; /* Occupy the full width of the navbar */
         position: fixed;
@@ -572,7 +600,8 @@ body.showCart .cartTab {
     text-align: center;
     flex-direction: column;
     padding: 14px;
-    }#listProduct .pro img {
+    }
+    #listProduct .pro img {
         width: 100%;
         border-radius: 20px;
         filter:drop-shadow (0 50px 20px #0009);
@@ -592,6 +621,7 @@ body.showCart .cartTab {
     #listProduct .pro h2{
         font-weight: 500;
         font-size:large;
+        padding-bottom: 10px;
     
     }
     #listProduct .pro .price{
@@ -710,6 +740,9 @@ body.showCart .cartTab {
 #navbar li{
 margin-bottom: 25px;
 }
+.dropdown-content a:hover{
+    color: #088178;
+ }
 #listProduct{
     grid-template-columns : repeat(2, 1fr);
 }
@@ -776,7 +809,9 @@ padding:10px;
             margin-bottom: 15px;
             padding: 0 10px;
         }
-    
+        .dropdown-content a:hover{
+            color: #088178;
+         }
         #lg-bag {
             margin-top: 15px;
             margin-right:30px;

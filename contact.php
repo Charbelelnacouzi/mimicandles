@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>mimicandles2</title>
+        <title>mimicandles & bags</title>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
         <link href="styles.css" rel="stylesheet">
     </head>
@@ -15,7 +15,13 @@
             <div>
                 <ul id="navbar">
                     <li><a  href="index.html">Home</a></li>
-                    <li><a  href="shop.html">Shop</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn" id="shopLink">Shop</a>
+                        <div class="dropdown-content" id="shopDropdown">
+                            <a href="shop.html?type=candles">Candles</a>
+                            <a href="bags.html?type=bags">Bags</a>
+                        </div>
+                    </li>
                     <li><a href="about.html">About us</a></li>
                     <li><a class="active" href="contact.html">Contact us</a></li>
                     <li><a id="lg-bag" class="lg-bag"><i class="far fa-shopping-bag"></i></a></li>
@@ -36,11 +42,10 @@
             <li><i class="fal fa-map"> </i>
             <p>Mount Lebanon Gharfine Saint Rita street Kordahi building</p></li>
             <li><i class="far fa-envelope"></i>
-            <p>mimicandles2@hotmail.com</p></li>
+            <p>mememe168@outlook.com</p></li>
             <li><i class="fas fa-phone-alt"></i>
             <p>+961 3 136021 - +961 79 182037</p></li>
-            <li><i class="far fa-clock"></i>
-            <p>Monday to Saturday: 9.00 am to 5.00 pm</p></li>
+           
         </div>
         </div>
         <div class="map">
@@ -105,7 +110,18 @@
         </button> 
             </section>
             
-
+            <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const shopLink = document.getElementById('shopLink');
+            const shopDropdown = document.getElementById('shopDropdown');
+    
+            shopLink.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent the default link behavior
+                shopDropdown.classList.toggle('show');
+            });
+        });
+    </script>
   <script src="app.js"></script>
+ 
     </body>
 </html>

@@ -68,14 +68,14 @@ if (isset($_POST["send"])) {
 
         // Clear and reset the cart items in localStorage and HTML
         echo '<script>';
-        echo 'localStorage.removeItem("cart");'; // Remove the cart items from localStorage
+        echo 'localStorage.removeItem("commonCart");'; // Remove the cart items from localStorage
         echo 'document.getElementById("cartItemsInput").value = "";'; // Clear the hidden input field value
         echo 'document.getElementById("cartItems").innerHTML = "";'; // Clear the cart items displayed in the HTML
         echo '</script>';
 
         // Output a response
         echo "Email sent successfully.";
-        echo '<script>alert("Thank you for choosing mimicandles! Your order has been submitted.");';
+        echo '<script>alert("Thank you for choosing mimi candles and bags! Your order has been submitted.");';
         echo 'window.location.href="index.html";</script>';
 
         exit();

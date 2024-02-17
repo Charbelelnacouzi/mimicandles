@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="checkout.css">
-    <title>Candle Shop Checkout</title>
+    <title>Checkout</title>
 </head>
 
 <body>
@@ -20,7 +20,13 @@
             <div>
                 <ul id="navbar">
                     <li><a href="index.html">Home</a></li>
-                    <li><a  href="shop.html">Shop</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn"  id="shopLink">Shop</a>
+                        <div  class="dropdown-content" id="shopDropdown">
+                            <a href="shop.html?type=candles">Candles</a>
+                            <a href="bags.html?type=bags">Bags</a>
+                        </div>
+                    </li>
                     <li><a  href="about.html">About us</a></li>
                     <li><a href="contact.php">Contact us</a></li>
                     <li><a class="active" id="lg-bag" class="lg-bag"><i class="far fa-shopping-bag"></i></a></li>
@@ -44,7 +50,7 @@
         <div id="total-amount">
             <h3>Total Amount</h3>
             <p id="subtotal">Subtotal: $0</p>
-            <p>Delivery Charge: $4</p>
+            <p>Delivery Charge: $3</p>
             <p id="total">Total: $0</p>
         </div>
    
@@ -86,5 +92,8 @@
         </button> 
     </div>
  <script src="app.js"></script>
+ 
+ 
+ 
 </body>
 </html>

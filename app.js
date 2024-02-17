@@ -8,10 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const listProductHTML = document.getElementById('listProduct');
     const listCartHTML = document.querySelector('.ListCart');
     const iconCartSpan = document.getElementById('span');
-
- 
-    
-
+   
 iconCart.addEventListener('click', () =>{
     body.classList.toggle('showCart')
 })
@@ -31,56 +28,48 @@ if (close) {
     });
 }
 
+let localStorageKey = 'commonCart';
 let listProducts = [];
-let carts = [];
+// Retrieve cart data from localStorage
+let carts = JSON.parse(localStorage.getItem(localStorageKey)) || [];
+try {
+    carts = JSON.parse(localStorage.getItem(localStorageKey)) || [];
+} catch (error) {
+  
+    carts = [];
+}
+
+let globalIdCounter = 1; // Initialize the global counter
 
 
-
-const addDataToHtml = () => {
-    listProductHTML.innerHTML = '';
-    if (listProducts.length > 0) {
-        listProducts.forEach(product => {
-            let newProduct = document.createElement('div');
-        newProduct.classList.add('pro');
-        newProduct.dataset.id = product.id;
-        newProduct.innerHTML = `
-    <img src="${product.image}" alt="">
-    <div class="des">
-        <span>${product.name}</span>
-        <h4>$${product.price}</h4>
-        <button class="addCart">
-            Add To Cart
-        </button>
-    </div>
-`;
-listProductHTML.appendChild(newProduct);
-
-        });
-    }
-};
 const addToCart = (product_id) => {
     let positionThisProductInCart = carts.findIndex((value) => value.product_id === product_id);
 
-    if (carts.length <= 0) {
-        carts = [{
-            product_id: product_id,
-            quantity: 1
-        }];
-    } else if (positionThisProductInCart < 0) {
+    if (carts.length <= 0 || positionThisProductInCart < 0) {
         carts.push({
             product_id: product_id,
             quantity: 1
         });
     } else {
-        carts[positionThisProductInCart].quantity = carts[positionThisProductInCart].quantity + 1;
-
+        carts[positionThisProductInCart].quantity += 1;
     }
+
     addCartToHTML();
     addCartToMemory();
+    updateLocalStorageCart();
 };
+
+// Function to update cart data in localStorage
+const updateLocalStorageCart = () => {
+    localStorage.setItem(localStorageKey, JSON.stringify(carts));
+};
+
 const addCartToMemory = () => {
-    localStorage.setItem('cart', JSON.stringify(carts));
-}
+    if (localStorageKey) {
+        localStorage.setItem(localStorageKey, JSON.stringify(carts));
+    }
+};
+
 const addCartToHTML = () => {
     listCartHTML.innerHTML = '';
     let totalQuantity = 0;
@@ -89,32 +78,37 @@ const addCartToHTML = () => {
     if (carts.length > 0) {
         carts.forEach(cart => {
             totalQuantity += cart.quantity;
-            let newCart = document.createElement('div');
-            newCart.classList.add('item');
-            newCart.dataset.id = cart.product_id;
-            let positionProduct = listProducts.findIndex((value) => value.id == cart.product_id);
-            let info = listProducts[positionProduct];
-            let itemTotalPrice = info.price * cart.quantity;
-            subtotal += itemTotalPrice;
 
-            newCart.innerHTML = `
-                <div class="cart-item">
-                    <div class="image">
-                        <img src="${info.image}" alt="">
-                    </div>
-                    <div class="details">
-                        <div class="name">${info.name}</div>
-                        <div class="price">$${info.price.toFixed(2)}</div>
-                        <div class="quantity">
-                            <span class="minus"><</span>
-                            <span>${cart.quantity}</span>
-                            <span class="plus">></span>
+            let product = listProducts.find(p => p.id == cart.product_id);
+
+            if (product) {
+                let itemTotalPrice = product.price * cart.quantity;
+                subtotal += itemTotalPrice;
+
+                let newCart = document.createElement('div');
+                newCart.classList.add('item');
+                newCart.dataset.id = cart.product_id;
+
+                newCart.innerHTML = `
+                    <div class="cart-item">
+                        <div class="image">
+                            <img src="${product.image}" alt="">
                         </div>
-                        <div class="totalPrice">$${itemTotalPrice.toFixed(2)}</div>
+                        <div class="details">
+                            <div class="name">${product.name}</div>
+                            <div class="price">$${product.price.toFixed(2)}</div>
+                            <div class="quantity">
+                                <span class="minus"><</span>
+                                <span>${cart.quantity}</span>
+                                <span class="plus">></span>
+                            </div>
+                            <div class="totalPrice">$${itemTotalPrice.toFixed(2)}</div>
+                        </div>
                     </div>
-                </div>
-            `;
-            listCartHTML.appendChild(newCart);
+                `;
+
+                listCartHTML.appendChild(newCart);
+            } 
         });
 
         // Calculate and display subtotal
@@ -124,7 +118,7 @@ const addCartToHTML = () => {
         }
 
         // Set a fixed delivery charge
-        let deliveryCharge = 4.00;
+        let deliveryCharge = 3.00;
 
         // Calculate and display total
         let totalElement = document.getElementById('total');
@@ -132,33 +126,30 @@ const addCartToHTML = () => {
             let totalWithDelivery = subtotal + deliveryCharge;
             totalElement.innerText = `Total: $${totalWithDelivery.toFixed(2)}`;
         }
-    
-       // Ensure the cart items are sent to the server
-       let cartItemsInput = document.getElementById('cartItemsInput');
-       if (cartItemsInput) {
-           cartItemsInput.value = JSON.stringify(carts.map(cart => {
-               let positionProduct = listProducts.findIndex(value => value.id == cart.product_id);
-               let info = listProducts[positionProduct];
-               return {
-                   id: info.id,
-                   name: info.name,
-                   quantity: cart.quantity,
-                   price: info.price
-               };
-           }));
-       }
-   }
+
+        // Ensure the cart items are sent to the server
+        let cartItemsInput = document.getElementById('cartItemsInput');
+        if (cartItemsInput) {
+            cartItemsInput.value = JSON.stringify(carts.map(cart => {
+                let product = listProducts.find(p => p.id == cart.product_id);
+                return {
+                    id: product.id,
+                    name: product.name,
+                    quantity: cart.quantity,
+                    price: product.price
+                };
+            }));
+        }
+    }
 
     iconCartSpan.innerText = totalQuantity;
 };
-
-
 
 listProductHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
     if (positionClick.classList.contains('addCart')|| positionClick.closest('.addCart')) {
         let product_id = positionClick.closest('.pro').getAttribute('data-id');
-        addToCart(product_id);
+        addToCart(product_id, localStorageKey);
     }
 });
 listCartHTML.addEventListener('click', (event) => {
@@ -197,23 +188,99 @@ const changeQuantity = (product_id, type) => {
 
     addCartToMemory();
     addCartToHTML();
+    updateLocalStorageCart();
+ 
 };
 
+const currentPage = window.location.pathname;
 
 const initApp = () => {
-    // get data from json
-    fetch('products.json')
-        .then(response => response.json())
-        .then(data => {
-            listProducts = data;
-            addDataToHtml();
+    const bagsJsonFile = 'bags.json';
+    const candlesJsonFile = 'candles.json';
 
-            //get cart from memory
-            if(localStorage.getItem('cart')){
-                carts = JSON.parse(localStorage.getItem('cart'));
-                addCartToHTML();
-            }
+    const fetchBagsData = fetchProducts(bagsJsonFile);
+    const fetchCandlesData = fetchProducts(candlesJsonFile);
+
+    Promise.all([fetchBagsData, fetchCandlesData])
+        .then(([bagsProducts, candlesProducts]) => {
+            // Combine products from both files
+            listProducts = [...bagsProducts, ...candlesProducts];
+
+            // Retrieve cart data from localStorage
+            carts = JSON.parse(localStorage.getItem(localStorageKey)) || [];
+
+            // Merge existing cart with new products
+            mergeCartWithNewProducts(bagsJsonFile);
+            mergeCartWithNewProducts(candlesJsonFile);
+
+            // Filter products based on the current page
+            const currentProducts = determineCurrentProducts();
+            
+            addDataToHtml(currentProducts);
+            addCartToHTML();
+        })
+        .catch((error) => {
+            console.error('Error fetching products:', error);
         });
+};
+
+const determineCurrentProducts = () => {
+    if (currentPage.includes('shop.html')) {
+        return listProducts.filter(product => product.id.includes('candles.json'));
+    } else if (currentPage.includes('bags.html')) {
+        return listProducts.filter(product => product.id.includes('bags.json'));
+    } else {
+        return listProducts; // Default to all products if the page is neither shop.html nor bags.html
+    }
+};
+const mergeCartWithNewProducts = (jsonFile) => {
+    carts.forEach(cartItem => {
+        let product = listProducts.find(product => product.id === `${jsonFile}-${cartItem.product_id.split('-')[1]}`);
+
+        if (product) {
+            // Update the product_id to match the current page
+            cartItem.product_id = product.id;
+        }
+    });
+};
+const fetchProducts = (jsonFile) => {
+    return fetch(jsonFile)
+        .then(response => response.json())
+        .then(products => {
+            return products.map(product => {
+                return {
+                    id: `${jsonFile}-${product.id}`,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image
+                };
+            });
+        })
+        .catch((error) => {
+            console.error(`Error fetching products from ${jsonFile}:`, error);
+            return [];
+        });
+};
+// Modify addDataToHtml to accept a list of products
+const addDataToHtml = (products) => {
+    listProductHTML.innerHTML = '';
+
+    products.forEach(product => {
+        let newProduct = document.createElement('div');
+        newProduct.classList.add('pro');
+        newProduct.dataset.id = product.id; // Use the product id as the dataset id
+        newProduct.innerHTML = `
+            <img src="${product.image}" alt="">
+            <div class="des">
+                <span>${product.name}</span>
+                <h4>$${product.price}</h4>
+                <button class="addCart">
+                    Add To Cart
+                </button>
+            </div>
+        `;
+        listProductHTML.appendChild(newProduct);
+    });
 };
 
 
