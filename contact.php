@@ -37,10 +37,9 @@
        <section id="contact-details" class="section-p1">
         <div class="details">
             
-            <h2>Visit our home location or contact us today</h2>
+            <h2>Contact us today</h2>
         <div>
-            <li><i class="fal fa-map"> </i>
-            <p>Mount Lebanon Gharfine Saint Rita street Kordahi building</p></li>
+       
             <li><i class="far fa-envelope"></i>
             <p>mememe168@outlook.com</p></li>
             <li><i class="fas fa-phone-alt"></i>
@@ -48,9 +47,7 @@
            
         </div>
         </div>
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13207.04414651052!2d35.65517445688821!3d34.15245526990672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f5b9cbe6ea04b%3A0x5b2725af91f98ad0!2sGharfine!5e0!3m2!1sen!2slb!4v1706715469166!5m2!1sen!2slb" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+       
        </section>
        <section id="form-details">
        <form action="send.php" method="post">
@@ -72,14 +69,17 @@
         <div class="col">
             <img src="pics/logo.jpeg" alt="">
             
-            <p><strong>Address:</strong> Mount Lebanon Gharfine, Saint Rita Street</p>
+        
             <P><strong>Phone:</strong>+961 3 136021 or +961 79 182037 (Whatsapp available)</P>
             
-        
-        <div >
-            <h4>Check and follow our pages for new videos and features</h4>
+            <div >
+            <h4>Check and follow our pages of candles</h4>
             <img class="fab fa-instagram" src="pics/instagram icon.png" onclick="window.location.href = 'https://www.instagram.com/mimicandles2/';"></i>
             <img class="fab fa-tiktok" src="pics/tiktoc icon.png" onclick="window.location.href = 'https://www.tiktok.com/@mimicandles2/';"></i>
+            <h4>Check and follow our page of bags</h4>
+            <img class="fab fa-instagram" src="pics/instagram icon.png" onclick="window.location.href = 'https://www.instagram.com/k_knitables/';"></i>
+            
+
         </div>
     </div>
        </footer>
