@@ -355,7 +355,7 @@ body{
 }
 /*about us */
 #page-header p{
-    color:black;
+    color:white;
     font-size: 40px;
 }
 #page-header.about-header{
@@ -610,13 +610,13 @@ body.showCart .cartTab {
     #listProduct {
     display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap:20px;
+      gap:10px;
       
     }
     
     #listProduct .pro {
         padding: 20px;
-      
+     
         border-radius: 20px;
     
     }
@@ -711,7 +711,7 @@ body.showCart .cartTab {
 
 /*about us */
 #page-header p{
-    color:black;
+    color:white;
     font-size: 40px;
 }
 #page-header.about-header{

@@ -28,6 +28,7 @@ body {
     position: relative;
     cursor:pointer;
 }
+
 #header span{
     display: flex;
     width: 18px;
@@ -77,8 +78,8 @@ color: #088178
 }
 
 
-
 .checkout-container {
+   
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -90,6 +91,7 @@ color: #088178
 #cart img {
     max-width: 40px;
 }
+
 #cart,
 #total-amount,
 #form-details,
@@ -99,8 +101,8 @@ color: #088178
     cursor: pointer;
 }
 #cart table td{
-   text-align: center;
-    font-size: 30px;
+     text-align: center;
+    font-size: 30px;  
 }
 
 #total-amount h3 {
@@ -156,6 +158,7 @@ color: #088178
 #form-details button:hover {
     background-color: #45a049;
 }
+
 @media (max-width:799px){
     #navbar {
         display: flex;
@@ -208,5 +211,6 @@ margin-bottom: 25px;
     margin-right:25px;
 
 }
+
 }
 /* Add more styles as needed for your specific layout */

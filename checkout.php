@@ -4,8 +4,7 @@
 <html lang="en">
 
 <head>
-    <!-- Include necessary stylesheets and meta tags -->
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="checkout.css">
     <title>Checkout</title>
@@ -20,13 +19,7 @@
             <div>
                 <ul id="navbar">
                     <li><a href="index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropbtn"  id="shopLink">Shop</a>
-                        <div  class="dropdown-content" id="shopDropdown">
-                            <a href="shop.html?type=candles">Candles</a>
-                            <a href="bags.html?type=bags">Bags</a>
-                        </div>
-                    </li>
+                    <li> <a href="shop.html">Shop</a></li>
                     <li><a  href="about.html">About us</a></li>
                     <li><a href="contact.php">Contact us</a></li>
                     <li><a class="active" id="lg-bag" class="lg-bag"><i class="far fa-shopping-bag"></i></a></li>
