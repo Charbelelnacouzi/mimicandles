@@ -206,6 +206,57 @@
         "price":10,
         "image":"pics/decorjar.jpg" 
         
+    }   ,{
+        "id": 55,
+        "name":"decoration small flower ",
+        "price":0.5,
+        "image":"pics/smallflower.jpg" 
+        
+    }
+    ,{
+        "id": 56,
+        "name":"easter egg ",
+        "price":7.5,
+        "image":"pics/egg.jpg" 
+        
+    }
+    ,{
+        "id": 57,
+        "name":"Jar with love",
+        "price":7,
+        "image":"pics/jar3.jpg" 
+        
+    }
+    ,{
+        "id": 58,
+        "name":"palm sunday candle",
+        "price":15,
+        "image":"pics/eastercandle.jpg" 
+        
+    }    ,{
+        "id": 59,
+        "name":"palm sunday candle1",
+        "price":10,
+        "image":"pics/eastercandle1.jpg" 
+        
+    }    ,{
+        "id": 60,
+        "name":"palm sunday candle2",
+        "price":10,
+        "image":"pics/eastercandle2.jpg" 
+        
+    }    ,{
+        "id": 61,
+        "name":"palm sunday candle3",
+        "price":12,
+        "image":"pics/eastercandle3.jpg" 
+        
+    }    ,{
+        "id": 62,
+        "name":"palm sunday candle4",
+        "price":11,
+        "image":"pics/eastercandle4.jpg" 
+        
     }
  
 ]
