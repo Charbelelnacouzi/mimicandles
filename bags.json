@@ -91,64 +91,76 @@
             "price":30,
             "image":"pics/bag12.jpg"
             
+        },{
+            "id": 45,
+            "name":"crochet hand bag 13",
+            "price":15,
+            "image":"pics/bag15.jpg"
+            
+        },{
+            "id": 46,
+            "name":"crochet hand bag 14",
+            "price":15,
+            "image":"pics/bag16.jpg"
+            
         }
         ,{
-            "id": 45,
+            "id": 47,
             "name":"crochet hand wallet",
             "price":20,
             "image":"pics/bag13.jpg"
             
         },{
-        "id":46,
+        "id":48,
         "name":"crochet hand wallet 1",
         "price":20,
         "image":"pics/bag14.jpg"
 
         },
         {
-            "id": 47,
+            "id": 49,
             "name":"hair band",
             "price":5,
             "image":"pics/band.jpg"
             
         },{
-            "id": 48,
+            "id": 50,
             "name":"scarf with hat",
             "price":30,
             "image":"pics/scarfhat.jpg"
             
         },{
-            "id": 49,
+            "id": 51,
             "name":"scarf",
             "price":35,
             "image":"pics/scarf.jpg"
             
         },{
-            "id": 50,
+            "id": 52,
             "name":"scarf with hat 1",
             "price":35,
             "image":"pics/scarfhat1.jpg"
             
         },{
-            "id": 51,
+            "id": 53,
             "name":"scarf 1",
             "price":25,
             "image":"pics/scarf1.jpg"
             
         },{
-            "id": 52,
+            "id": 54,
             "name":"scarf with hat for kids",
             "price":30,
             "image":"pics/scarfhatkid.jpg"
             
         },{
-            "id": 53,
+            "id": 55,
             "name":"scarf with hat 2",
             "price":30,
             "image":"pics/scarfhat2.jpg"
             
         },{
-            "id": 54,
+            "id": 56,
             "name":"scarf with hat 3",
             "price":35,
             "image":"pics/scarfhat3.jpg"

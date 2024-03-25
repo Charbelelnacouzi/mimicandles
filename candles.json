@@ -113,7 +113,7 @@
     ,{
         "id": 18,
         "name":"Jar with decoration",
-        "price":8,
+        "price":6,
         "image":"pics/jar1.jpg"
     }
     ,{
@@ -175,7 +175,7 @@
     ,{
         "id": 27,
         "name":"Jar with decoration",
-        "price":10,
+        "price":6,
         "image":"pics/jar2.jpg" 
         
     }
@@ -207,28 +207,34 @@
         "image":"pics/decorjar.jpg" 
         
     }   ,{
-        "id": 55,
+        "id": 57,
         "name":"decoration small flower ",
         "price":0.5,
         "image":"pics/smallflower.jpg" 
         
     }
     ,{
-        "id": 56,
+        "id": 58,
         "name":"easter egg ",
         "price":7.5,
         "image":"pics/egg.jpg" 
         
     }
     ,{
-        "id": 57,
+        "id": 59,
         "name":"Jar with love",
         "price":7,
         "image":"pics/jar3.jpg" 
         
+    }  ,{
+        "id": 60,
+        "name":"box-decoration",
+        "price":10,
+        "image":"pics/box-decoration.jpg" 
+        
     }
     ,{
-        "id": 58,
+        "id": 61,
         "name":"palm sunday candle",
         "price":15,
         "image":"pics/eastercandle.jpg" 
@@ -240,23 +246,53 @@
         "image":"pics/eastercandle1.jpg" 
         
     }    ,{
-        "id": 60,
+        "id": 62,
         "name":"palm sunday candle2",
         "price":10,
         "image":"pics/eastercandle2.jpg" 
         
     }    ,{
-        "id": 61,
+        "id": 63,
         "name":"palm sunday candle3",
         "price":12,
         "image":"pics/eastercandle3.jpg" 
         
     }    ,{
-        "id": 62,
+        "id": 64,
         "name":"palm sunday candle4",
         "price":11,
         "image":"pics/eastercandle4.jpg" 
         
-    }
+    },{
+        "id": 65,
+        "name":"friendship",
+        "price":2,
+        "image":"pics/souvenir.jpg" 
+        
+    } ,{
+        "id": 66,
+        "name":"wedding dress",
+        "price":2.5,
+        "image":"pics/wedding .jpg" 
+        
+    } ,{
+        "id": 67,
+        "name":"home",
+        "price":8,
+        "image":"pics/home.jpg" 
+        
+    } ,{
+        "id": 68,
+        "name":"ice cream candle",
+        "price":5,
+        "image":"pics/fraise.jpg" 
+        
+    } ,{
+        "id": 69,
+        "name":"Aroma diffuser",
+        "price":8,
+        "image":"pics/aroma-diffuser.jpg"  
+        
+    } 
  
 ]
